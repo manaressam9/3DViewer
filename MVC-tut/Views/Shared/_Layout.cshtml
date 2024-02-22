@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC_tut</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-3">Mist 3D Model Viewer</h1>
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024  <a href="https://www.mist-net.com" target="_blank">Mist</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="module" src="~/lib/three/build/three.module.js"></script>
+    <script type="module" src="~/lib/three/examples/jsm/libs/stats.module.js"></script>
+    <script type="module" src="~/lib/three/examples/jsm/loaders/GLTFLoader.js"></script>
+    <script type="module" src="~/lib/three/examples/jsm/environments/RoomEnvironment.js"></script>
+    <script type="module" src="~/lib/three/examples/jsm/controls/ArcballControls.js"></script>
+    <script type="module" src="~/js/mod2.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
